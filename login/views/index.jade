@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title Crea tu cuenta de Sentio
+		link(rel='icon', type='image/png', href='../../assets/img/logo/icon.png')
+		link(rel='stylesheet', href='stylesheets/FORMstyle.css')
+	body
+		.container
+			form#signup(method='POST' action='/user/signup')
+				.header
+					h1 Registro
+					p Introduce tus datos a continuacion
+				.sep
+				.inputs
+					input(type='text', placeholder='nombre')
+					input(type='email', placeholder='e-mail')
+					input(type='password', placeholder='contrasena')
+					label(for='birthday') Fecha de nacimiento 
+					input(type='date', name='birthday', value='1969-04-20')
+					label(for='music') Musica favorita 
+					textarea(rows='4', cols='50', placeholder='cuentanos cuales son tus gustos musicales')                     
+					.checkboxy
+						input#checky(name='cecky', value='1', type='checkbox')
+						label.terms
+							| I accept the terms
+							| of use
+					a#submit(href='#') Registrate a SENTIO 
